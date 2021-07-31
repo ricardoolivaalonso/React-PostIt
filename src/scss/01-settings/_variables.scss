@@ -1,0 +1,23 @@
+$black: #2b2b2b;
+$white: #FFFFFF;
+$gray: #FAF8F4;
+$blue: #2b99bb;
+$priority: lighten($blue, 15);
+
+$max-width: 1480px;
+$mq-1: 1200px;
+$mq-2: 1000px;
+$mq-3: 900px;
+$mq-4: 700px;
+$mq-5: 500px;
+
+$transition: 200ms cubic-bezier(0.6, 0.04, 0.98, 0.335);
+
+:root{
+	--gap-v: 40px;
+	--gap-h: 60px;
+	--grid-gap: 16px;
+
+	@media (max-width: $mq-2) { --gap-v: 40px; --gap-h: 40px; }
+	@media (max-width: $mq-5) { --gap-v: 30px; --gap-h: 30px; --grid-gap: 12px; }
+}

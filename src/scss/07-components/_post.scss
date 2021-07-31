@@ -1,0 +1,77 @@
+.post{
+	&__item{
+		width: 100%;
+		position: relative;
+		background-color: $black;
+
+		&--priority{ 
+			background-color: $blue;
+			.post__name:focus{ caret-color: $black; }
+		}
+
+		& + .post__item{ margin-top: var(--grid-gap); }
+	}
+		&__name{
+			width: 100%;
+			padding: calc(20px / 1.25);
+			padding-top: calc(20px * 2.125);
+
+			font-family: 'DM Sans', sans-serif;
+			font-size: 14px;
+			line-height: 1.5;
+			letter-spacing: .5px;
+
+			overflow-x: hidden;
+			overflow-y: auto;
+			resize: none;
+			appearance: none;
+			border: none;
+			outline: none;
+
+			color: rgba($white, .9);
+			background-color: transparent;
+			transition: $transition;
+
+			&:focus{
+				caret-color: $blue;
+				color: $white;
+				transition: $transition;
+			}
+		}
+
+		&__delete,
+		&__priority{
+			position: absolute;
+			top: calc(20px / 1.5);
+			width: 20px;
+			height: 20px;
+
+			border-radius: 50%;
+			border: none;
+			cursor: pointer;
+			opacity: .3;
+			z-index: 2;
+			transition: $transition;
+
+			&:hover{
+				opacity: .8;
+				transition: $transition;
+			}
+		}
+		&__delete{
+			left: calc(20px / 1.5);
+			transform: rotateZ(45deg);
+
+			font-size: 16px;
+			background-color: $gray;
+			color: $black;
+		}
+		&__priority{
+			right: calc(20px / 1.5);
+			
+			font-size: 12px;
+			border: 2px solid $white;
+			color: $white;
+			background-color: transparent;
+		}
+}

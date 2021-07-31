@@ -1,0 +1,9 @@
+.header{
+	&__title{
+		font-size: 30px;
+		letter-spacing: .25px;
+		color: darken($black, 10);
+
+		span{ color: $blue; }
+	}
+}

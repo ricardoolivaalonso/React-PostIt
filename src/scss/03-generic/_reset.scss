@@ -1,0 +1,14 @@
+*, *::after, *::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+::-webkit-scrollbar {width: 5px; }
+::-webkit-scrollbar-track { background-color: rgba($blue, .2); }
+::-webkit-scrollbar-thumb{ background-color: rgba($blue, .5); }
+
+::selection {
+	background-color: $gray;
+	color: $blue;
+}
